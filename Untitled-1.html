@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <a href="Nouveau dossier (4)/Untitled-1.html" target="_blank">
+      <button class="btn btn-info">AlloCinéMEAS</button>
+    </a>
+    <title>Gestion des films</title>
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center">Gestion des films</h1>
+      <div class="form-group d-flex align-items-center">
+        <label for="filter-select">Trier par :</label>
+        <select class="form-control ml-3" id="filter-select">
+          <option value="title">Titre</option>
+          <option value="year">Année</option>
+        </select>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Année</th>
+            <th>Auteur</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="films-list">
+          <!-- Les films seront insérés ici -->
+        </tbody>
+      </table>
+      <button class="btn btn-primary" id="add-film-btn">Ajouter</button>
+      <form class="d-none" id="add-film-form">
+        <div class="form-group">
+          <label for="film-title">Titre</label>
+          <input type="text" class="form-control" id="film-title" required />
+        </div>
+        <div class="form-group">
+          <label for="film-year">Année</label>
+          <input
+            type="number"
+            class="form-control"
+            id="film-year"
+            min="1900"
+            max="2023"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="film-author">Auteur</label>
+          <input type="text" class="form-control" id="film-author" required />
+        </div>
+        <button type="submit" class="btn btn-success">Sauvegarder</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
